@@ -1,11 +1,3 @@
-.list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  gap: 10px;
-}
-
-.status {
-  margin: 0;
+.text:last-child {
+  margin-bottom: 0;
 }
