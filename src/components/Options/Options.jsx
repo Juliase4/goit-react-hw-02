@@ -1,28 +1,12 @@
 import css from "../Options/Options.module.css";
 
-export default function Options() {
-  // const updateFeedback = (feedbackType) => {
-  //   const [clicks, setClicks] = useState(0);
-
-  //   setClicks(clicks + 1);
-  // };
-
+export default function Options({ update, total, init }) {
   return (
     <div className={css.container}>
-      <ul className={css.list}>
-        <li>
-          <button>Good</button>
-        </li>
-        <li>
-          <button>Neutral</button>
-        </li>
-        <li>
-          <button>Bad</button>
-        </li>
-        {/* <li>
-          <button>Reset</button>
-        </li> */}
-      </ul>
+      <button onClick={() => update("good")}>Good</button>
+      <button onClick={() => update("neutral")}>Neutral</button>
+      <button onClick={() => update("bad")}>Bad</button>
+      {total > 0 && <button onClick={() => init()}>Reset</button>}
     </div>
   );
 }
